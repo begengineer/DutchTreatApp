@@ -1,0 +1,351 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+    background: #f5f5f5;
+    min-height: 100vh;
+    padding: 40px 10px;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+header {
+    background: white;
+    padding: 24px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    margin-bottom: 6px;
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+.subtitle {
+    font-size: 0.875rem;
+    color: #666;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+section {
+    background: white;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+    font-size: 1rem;
+    margin-bottom: 16px;
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+    font-size: 0.875rem;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+input[type="number"],
+input[type="text"] {
+    flex: 1;
+    padding: 10px 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: border-color 0.2s;
+    background: white;
+}
+
+input[type="number"]:focus,
+input[type="text"]:focus {
+    outline: none;
+    border-color: #FF6B35;
+}
+
+.currency {
+    font-weight: 500;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.add-person-form {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.add-person-form input[type="text"] {
+    flex: 2;
+}
+
+.add-person-form input[type="number"] {
+    flex: 1;
+}
+
+.hint {
+    font-size: 0.8rem;
+    color: #999;
+}
+
+.btn-primary,
+.btn-calculate {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-primary {
+    background: #1a1a1a;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #333;
+}
+
+.btn-primary:active {
+    transform: scale(0.98);
+}
+
+.btn-calculate {
+    width: 100%;
+    background: #FF6B35;
+    color: white;
+    font-size: 1rem;
+    padding: 12px;
+}
+
+.btn-calculate:hover {
+    background: #ff5722;
+}
+
+.btn-calculate:active {
+    transform: scale(0.98);
+}
+
+.btn-calculate:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.participants-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.empty-message {
+    text-align: center;
+    color: #999;
+    padding: 24px;
+    font-size: 0.9rem;
+}
+
+.participant-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    background: #fafafa;
+    border-radius: 8px;
+    border: 1px solid #e8e8e8;
+}
+
+.participant-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+}
+
+.participant-name {
+    font-weight: 500;
+    color: #1a1a1a;
+    font-size: 0.95rem;
+}
+
+.participant-ratio {
+    background: #FF6B35;
+    color: white;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.btn-remove {
+    background: transparent;
+    color: #ff4757;
+    border: 1px solid #ff4757;
+    padding: 6px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all 0.2s;
+}
+
+.btn-remove:hover {
+    background: #ff4757;
+    color: white;
+}
+
+.btn-remove:active {
+    transform: scale(0.96);
+}
+
+.result-section {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.result-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px;
+    background: #fafafa;
+    border-radius: 8px;
+    border: 1px solid #e8e8e8;
+}
+
+.result-name {
+    font-weight: 500;
+    color: #1a1a1a;
+    font-size: 0.95rem;
+}
+
+.result-amount {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #FF6B35;
+}
+
+.result-summary {
+    border-top: 1px solid #e8e8e8;
+    padding-top: 14px;
+    margin-top: 14px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.summary-item .amount {
+    color: #FF6B35;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+footer {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    margin-top: 20px;
+}
+
+footer p {
+    color: #666;
+    font-size: 0.85rem;
+}
+
+.visitor-count {
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #1a1a1a;
+    font-size: 0.9rem;
+}
+
+.visitor-count span {
+    color: #FF6B35;
+    font-weight: 600;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 600px) {
+    body {
+        padding: 20px 12px;
+    }
+
+    header {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 1.3rem;
+    }
+
+    section {
+        padding: 16px;
+    }
+
+    .add-person-form {
+        flex-direction: column;
+    }
+
+    .add-person-form input[type="text"],
+    .add-person-form input[type="number"] {
+        display: block;      /* 1つずつ改行して表示 */
+        margin-bottom: 8px;  /* 下に少し余白 */
+    }
+
+    .participant-item {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .participant-info {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .btn-remove {
+        width: 100%;
+    }
+}

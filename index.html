@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>割り勘計算アプリ - DuTreat</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>割り勘計算アプリ</h1>
+            <p class="subtitle">飲み会の支払いを簡単に計算</p>
+        </header>
+
+        <main>
+            <!-- 合計金額入力セクション -->
+            <section class="total-amount-section">
+                <label for="totalAmount">合計金額</label>
+                <div class="input-group">
+                    <input type="number" id="totalAmount" placeholder="10000" min="0">
+                    <span class="currency">円</span>
+                </div>
+            </section>
+
+            <!-- 参加者追加セクション -->
+            <section class="add-person-section">
+                <h2>参加者を追加</h2>
+                <div class="add-person-form">
+                    <input type="text" id="personName" placeholder="名前を入力">
+                    <input type="number" id="personRatio" placeholder="倍率" value="1.0" step="0.1" min="0.1">
+                </div>
+                <center>
+                <button id="addPersonBtn" class="btn-primary">追加</button>
+                </center>
+                <p class="hint">倍率: 1.0が標準、1.5で1.5倍、0.5で半額</p>
+            </section>
+
+            <!-- 参加者リストセクション -->
+            <section class="participants-section">
+                <h2>参加者一覧</h2>
+                <div id="participantsList" class="participants-list">
+                    <p class="empty-message">参加者を追加してください</p>
+                </div>
+            </section>
+
+            <!-- 計算ボタン -->
+            <section class="calculate-section">
+                <button id="calculateBtn" class="btn-calculate">計算する</button>
+            </section>
+
+            <!-- 結果表示セクション -->
+            <section class="result-section" id="resultSection" style="display: none;">
+                <h2>支払い金額</h2>
+                <div id="resultList" class="result-list"></div>
+                <div class="result-summary">
+                    <div class="summary-item">
+                        <span>合計:</span>
+                        <span id="calculatedTotal" class="amount">0円</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2025 DuTreat - 割り勘計算アプリ</p>
+            <p class="visitor-count">訪問者数: <span id="visitorCount">0</span>人</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
