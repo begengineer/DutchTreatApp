@@ -295,7 +295,7 @@ footer p {
 }
 
 .visitor-count {
-    margin-bottom: 8px;
+    margin-bottom: 12px;
     font-weight: 500;
     color: #1a1a1a;
     font-size: 0.9rem;
@@ -304,6 +304,26 @@ footer p {
 .visitor-count span {
     color: #FF6B35;
     font-weight: 600;
+}
+
+.footer-links {
+    margin: 12px 0;
+    font-size: 0.85rem;
+}
+
+.footer-links a {
+    color: #666;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: #FF6B35;
+}
+
+.footer-links .separator {
+    margin: 0 8px;
+    color: #ccc;
 }
 
 /* レスポンシブデザイン */
